@@ -34,7 +34,7 @@ int test_taylor_tan()
         double eps;
         double expected;
     } tests[] = {
-        {0.0, 1e-6, tan(0.0)},
+        {0.2, 1e-6, tan(0.2)},
         {0.1, 1e-6, tan(0.1)},
         {0.3, 1e-6, tan(0.3)}
     };
@@ -52,6 +52,6 @@ int test_taylor_tan()
         }
     }
 
-    printf("0\n Tests Passed!");
+    printf("0\nTests Passed!");
     return 0;
 }
