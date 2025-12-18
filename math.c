@@ -1,6 +1,7 @@
 #include "vik.h"
 #include <math.h>
 #include <stdio.h>
+#include <stddef.h>
 
 static const double C[] = {
     1.0,
@@ -15,11 +16,12 @@ static const double C[] = {
 
 double taylor_tan(double x, double eps)
 {
+    (void)eps;
     double x2 = x*x;
     double sum = 0.0;
     double term = x;
 
-    for (int n = 0; n < sizeof(C)/sizeof(C[0]); n++) {
+    for (size_t n = 0; n < sizeof(C) / sizeof(C[0]); n++) {
         sum += C[n] * term;
         term *= x2;
     }
